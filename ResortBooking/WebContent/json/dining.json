@@ -1,0 +1,25 @@
+    [
+    {
+    "age": "1",
+    "id": "Chilli Paneer",
+    "imageUrl": "img/paneer.jpg",
+    "prize": "8.99$",
+    "snippet" : "Cottage cheese fried and served with green chilli" 
+    },
+    
+    {
+    "age": "2",
+    "id": "Biryani",
+    "imageUrl": "img/biryani.jpg",
+    "prize": "9.58$",
+    "snippet" : "Basmati Rice cooked in pure ghee and full of green vegetables" 
+    },
+    
+    {
+    "age": "3",
+    "id": "Masala Dosha",
+    "imageUrl": "img/dosha.jpg",
+    "prize": "10.00$",
+    "snippet" : "Indian crepe made of lentils and rice" 
+    }  
+    ]

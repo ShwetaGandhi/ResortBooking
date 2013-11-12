@@ -1,0 +1,34 @@
+<style>
+		.item img{
+            width: 3500px;
+            height: 400px;
+            }
+            .item1 p{ 
+    width: 100%;
+    display: block;
+    font-family: Georgia,"Times New Roman", Times, serif;
+    size:20px; 
+    line-height: 20px; 
+    color: #FFF;
+    z-index: 100;
+}
+</style>
+
+<div class ="container">
+	<div id ="myCarousel" class = "carousel">
+		<div class ="carousel-inner">
+			<div class="item active"><img src="img/img1.jpg"><p class="item1">Registration desk</p></div>
+			<div class="item"><img src="img/img2.jpg"><p class="item1">Lobby</p></div>
+			<div class="item"><img src="img/img3.jpg"><p class="item1">Waiting area on each floor</p></div>
+			</div>
+	</div>
+	<!-- <button ng-click='logout()'>Logout</button> -->
+</div>
+<script src="js/carousel.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.carousel').carousel({
+			interval:2000
+		});
+	});
+</script>

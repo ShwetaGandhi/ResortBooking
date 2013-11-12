@@ -1,0 +1,15 @@
+<body ng-controller="viewController">
+<ul class="thumbnails">
+	<li class="span4" ng-repeat="element in elements">
+		<div class="thumbnail">
+			<h3 align ="center">Room Type: {{element.room}}</h3>
+			<p><b>Facilities:</b>{{element.description}}</p>
+			<p align="center"><b>Weekday Prize:</b>{{element.weekday_pz}}</p>
+			<p align="center"><b>Weekend Prize:</b>{{element.weekend_pz}}</p>
+			<p><b>pet allowed:</b> {{element.petallowed}}</p>
+			<a href="#/ViewRooms/{{element.room}}"><img ng-src ="{{element.imgurl}}"></a>
+			<p align="center"><a class="btn" href="#/ViewRooms/{{element.room}}">Reservation</a></p>
+		</div>
+	</li>
+</ul>
+</body>

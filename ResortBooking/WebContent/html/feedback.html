@@ -1,0 +1,55 @@
+	<form>
+	<table>
+	<tr>
+    <TD ALIGN="CENTER"><B>Name:</B></TD> 
+    <TD ALIGN="CENTER"> <INPUT TYPE="TEXT" SIZE="25" ng-model="Person"></TD>
+    </TR>
+   
+    <TR>
+    <TD ALIGN="CENTER"><B>Email:</B></TD> 
+    <TD ALIGN="CENTER"> <INPUT TYPE="TEXT" SIZE="25" MAXLENGTH="40" ng-model="emailaddress"></TD>
+    </TR>
+   
+          
+    <TR>
+    <TD ALIGN="CENTER"><B>How would you rate my website:</B></TD> 
+    <TD ALIGN="CENTER"> 
+    <INPUT TYPE="radio" ng-model = "rating" VALUE = "Excellent"> Excellent 
+    <INPUT TYPE="radio" ng-model = "rating" VALUE = "Good"> Good 
+    <INPUT TYPE="radio" ng-model = "rating" VALUE = "Average" CHECKED> Average 
+    <INPUT TYPE="radio" ng-model = "rating" VALUE = "Poor"> Poor 
+    <INPUT TYPE="radio" ng-model = "rating" VALUE = "Overhaul"> Needs an Overhaul
+    </TD>
+    </TR>
+   
+    <TR>
+    <TD ALIGN="CENTER"><B>Comments or Suggestions:</B></TD> 
+    <TD ALIGN="CENTER"> 
+    <TEXTAREA ROWS="6" COLS="40" WRAP="PHYSICAL" ng-model="suggestions">
+             Enter any comments or suggestions you have here.</TEXTAREA>
+    </TD>
+    </TR>
+    
+        
+    <TD ALIGN="LEFT">
+    
+    <button ng-click ='submit()'class ="btn btn-primary">Submit</button> &nbsp; &nbsp;
+    <button type="reset" class='btn'>Reset</button> 
+    
+    </TD>
+    </TR>
+        </table>
+        </form>
+   
+    <ul>
+    <div class="span4" ng-repeat="result in results">
+		<div class="thumbnail">
+			<h3 align ="center">Rating: {{result.rate}}</h3>
+			
+			<p align="center"><b>Comment:</b>{{result.comment}}</p>
+			<p align="center"><b>Name:</b>{{result.name}}</p>
+			<p align="center"><b>Date and Time:</b>{{result.cmtdate}}</p>
+			</div>
+	</div
+	>
+  </ul>

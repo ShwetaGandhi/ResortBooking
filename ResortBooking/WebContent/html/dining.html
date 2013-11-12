@@ -1,0 +1,34 @@
+   <style>
+		.dining img{
+            width: 100px;
+            height: 100px;
+            padding: 1em;
+            }
+   </style>
+<div class="container-fluid">
+    <div class="row-fluid">
+    <div class="span2">
+    <!--Sidebar content-->
+     
+    Search: <input ng-model="query">
+    Sort by:
+    <select ng-model="orderProp">
+    <option value="name">Alphabetical</option>
+    <option value="age">Prize</option>
+    </select>
+     
+    </div>
+    <div class="span10">
+    <!--Body content-->
+     
+    <ul class="dining">
+    <li ng-repeat="dine in dining | filter:query | orderBy:orderProp" class="thumbnail">
+    <img ng-src="{{dine.imageUrl}}">
+   <i> <B>{{dine.id}}</B></i> <p><b> Prize {{dine.prize}}</b></p>
+    <p>{{dine.snippet}}</p>
+    </li>
+    </ul>
+     
+    </div>
+    </div>
+    </div>

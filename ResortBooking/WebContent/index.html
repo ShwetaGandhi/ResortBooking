@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="hotelData">
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome</title>
+
+<link href ="css/bootstrap.css" rel="stylesheet" type="text/css">
+	<style>
+	/* for alignment of tabs in center*/
+	   .nav-tabs > li{
+    	float:none;
+    	display:inline-block;
+    	} 
+		.nav-tabs {
+    	text-align:center;
+		}
+	</style>
+</head>
+<body ng-controller="indexController">
+	<h2 align="center" class="page-header">UTOPIA <small> Way of living</small></h2>
+	<ul class="nav nav-tabs">
+		<li><a href="#">Home</a></li>
+		<!-- Dropdown code -->
+		<li class ="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Rooms<b class="caret"></b></a>
+			<ul class="dropdown-menu">
+				<li><a href="#/ViewRooms">Rooms/Booking</a></li>
+				<li><a href="#/Update">Update Reservation</a></li>
+				</ul>
+		</li>
+		<!-- dropdown ends -->
+		<!-- <li><a href="#/Update">Update/Delete</a></li> -->
+		<li><a href="#/Dining">Dining</a></li>
+		<li><a href="#/SignUp">Sign Up for deals</a></li>
+		<li><a href="#{{login}}">{{login}}</a></li>
+			  <div id =emailResult>{{emailResult}}</div> 
+		<li><a href="#/Aboutus">About Us</a></li>
+		<li><a href="#/FeedBack">FeedBack</a></li>
+	</ul>
+	
+	
+	
+		<div ng-view ng-hide="showNgHide"></div>
+		<div ng-show="showNgHide">Please Wait..</div>
+	
+	
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript"></script>
+
+<!-- datepicker lib -->
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<!-- datepicker end -->
+
+<script src="js/angular.js"></script>
+<script src="js/controller.js"></script>
+<script src="js/app.js"></script>
+
+<!-- cookies file -->
+<script src="js/angular-cookies.js"></script>
+<script src="http://code.angularjs.org/1.0.8/angular-cookies.min.js"></script>
+<script src ="js/bootstrap.js"></script>
+<script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+
+<!-- Name of all controllers -->
+<script src ="js/viewController.js"></script>
+<script src="js/loginCtrl.js"></script>
+<script src="js/detailController.js"></script>
+<script src ="js/finalController.js"></script>
+<script src="js/logoutCtrl.js"></script>
+<script src ="js/signin.js"></script>
+<script src="js/updateController.js"></script>
+<script src="js/aboutusController.js"></script>
+<script src ="js/feedbackController.js"></script>
+</html>

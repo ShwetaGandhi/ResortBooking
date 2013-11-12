@@ -1,0 +1,24 @@
+
+<form name = "myForm" class ="well span6">
+		<label>Name:</label> <input type="text" name ="userName" ng-model="name" required ng-pattern="word" ng-controller="Ctrl">
+		<span class="error" ng-show="myForm.userName.$error.required">required!</span>
+		<span class ="error" ng-show ="myForm.userName.$error.pattern">Single word only</span><br>
+		
+		<label>Email:</label><input type="text" name="email" ng-model="email" required>
+		<span class="error" ng-show="myForm.email.$error.required">required!</span><br/>
+
+		<label>Password:</label><input type="password" ng-model="id" name ="userId" required>
+		<span class="error" ng-show="myForm.userId.$error.required">required!</span><br/>
+
+		<label> Age:</label> <input type ="number" ng-model="age" name ="userAge">
+		<span class ="error" ng-show ="myForm.userAge.$error.number">Enter number only</span><br/>
+
+		<label>Address:</label> <textarea ng-model="address" rows="3" cols="15" ></textarea><br/>
+		
+		<label>Credit Card No:</label><input type="number" ng-model="ccn" name="ccn">
+		<span class ="error" ng-show ="myForm.userAge.$error.number">Enter number only</span><br/>
+		
+		<button  ng-click="addUser()" class ="btn btn-primary">Submit</button>
+		<button type="reset" class ="btn">Reset</button>
+
+	</form>
